@@ -3,9 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <title>Adventure in the Inca Empire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('machupicchu.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .languages {
+      font-size: 14px;
+    }
+    .main {
+      padding: 100px 30px;
+      text-align: center;
+    }
+    .main h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .main p {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .main a {
+      background: #ffd700;
+      color: #333;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Adventure in the Inca Empire</h1>
-  <p>This is the home page of your trekking adventure site.</p>
+  <nav>
+    <div class="menu">
+      <a href="index.html">Inicio</a>
+      <a href="tours.html">Tours</a>
+      <a href="about.html">Nosotros</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contacto</a>
+    </div>
+    <div class="languages">
+      <a href="#">EN</a> | <a href="#">FR</a> | <a href="#">中</a>
+    </div>
+  </nav>
+  <header class="main">
+    <h1>Conociendo el Imperio Inca</h1>
+    <p>Explora los caminos ancestrales del Perú con guías expertos</p>
+    <a href="tours.html">Ver nuestros tours</a>
+  </header>
 </body>
 </html>

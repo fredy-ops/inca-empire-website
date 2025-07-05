@@ -1,0 +1,28 @@
+.menu {
+  background-color: #004d40;
+  padding: 10px 0;
+}
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+.menu ul li {
+  margin: 0 15px;
+}
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+.menu ul li a:hover {
+  text-decoration: underline;
+}
+.menu .lang {
+  margin-left: auto;
+  margin-right: 20px;
+}

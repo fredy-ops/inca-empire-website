@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Contacto - Adventure in the Inca Empire</title>
+  <title>¿Por qué elegirnos? - Adventure in the Inca Empire</title>
   <link rel="stylesheet" href="menu.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -46,8 +46,31 @@
       max-width: 900px;
       margin: 40px auto;
       padding: 0 20px;
-      line-height: 1.6;
+      line-height: 1.8;
       font-size: 18px;
+      color: #333;
+    }
+
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      text-decoration: none;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      z-index: 999;
     }
   </style>
 </head>
@@ -59,7 +82,7 @@
     <li><a href="tours.html">Tours</a></li>
     <li><a href="about.html">Nosotros</a></li>
     <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contacto</a></li>
+    <li><a href="contact.html">Por qué elegirnos</a></li>
     <li class="lang">
       <a href="#" onclick="setLang('es')">ES</a> |
       <a href="#" onclick="setLang('en')">EN</a> |
@@ -70,49 +93,55 @@
 </nav>
 
 <header>
-  <h1 id="contact-title">Contáctanos</h1>
+  <h1 id="contact-title">¿Por qué elegirnos?</h1>
 </header>
 
 <div class="content" id="contact-content">
-  <p><strong>Email:</strong> info@incaempire.tours</p>
-  <p><strong>Dirección:</strong> Cusco, Perú</p>
-  <p><strong>Teléfono:</strong> +51 987 654 321</p>
-  <p>Si tienes dudas, comentarios o deseas reservar una aventura, ¡estamos listos para ayudarte!</p>
+  <p>En <strong>Adventure in the Inca Empire</strong>, no solo organizamos viajes; creamos experiencias que transforman. Sabemos que visitar Perú y caminar por las sendas del Imperio Inca no es cualquier aventura: es un sueño ancestral, un encuentro con la historia, la cultura y la naturaleza viva de los Andes.</p>
+  <p>Con nosotros, cada paso está guiado por expertos locales, apasionados por su tierra y comprometidos con brindarte seguridad, autenticidad y momentos que atesorarás para siempre. Nuestros grupos son reducidos, porque creemos que el contacto humano y la atención personalizada hacen la diferencia.</p>
+  <p>Desde el primer contacto hasta tu regreso a casa, estaremos contigo. Te ofrecemos soporte 24/7, rutas alternativas, gastronomía andina, equipo profesional y sobre todo, una familia de viajeros que ama lo que hace.</p>
+  <p>Confía tu viaje a quienes viven estas tierras. Elige viajar con propósito. Elige Adventure in the Inca Empire.</p>
 </div>
+
+<a class="whatsapp-float" href="https://wa.me/51987654321" target="_blank">💬 WhatsApp</a>
+
+<footer>
+  <p>&copy; 2025 Adventure in the Inca Empire</p>
+</footer>
 
 <script>
   const translations = {
     es: {
-      title: "Contáctanos",
+      title: "¿Por qué elegirnos?",
       content: `
-        <p><strong>Email:</strong> info@incaempire.tours</p>
-        <p><strong>Dirección:</strong> Cusco, Perú</p>
-        <p><strong>Teléfono:</strong> +51 987 654 321</p>
-        <p>Si tienes dudas, comentarios o deseas reservar una aventura, ¡estamos listos para ayudarte!</p>`
+        <p>En <strong>Adventure in the Inca Empire</strong>, no solo organizamos viajes; creamos experiencias que transforman. Sabemos que visitar Perú y caminar por las sendas del Imperio Inca no es cualquier aventura: es un sueño ancestral, un encuentro con la historia, la cultura y la naturaleza viva de los Andes.</p>
+        <p>Con nosotros, cada paso está guiado por expertos locales, apasionados por su tierra y comprometidos con brindarte seguridad, autenticidad y momentos que atesorarás para siempre. Nuestros grupos son reducidos, porque creemos que el contacto humano y la atención personalizada hacen la diferencia.</p>
+        <p>Desde el primer contacto hasta tu regreso a casa, estaremos contigo. Te ofrecemos soporte 24/7, rutas alternativas, gastronomía andina, equipo profesional y sobre todo, una familia de viajeros que ama lo que hace.</p>
+        <p>Confía tu viaje a quienes viven estas tierras. Elige viajar con propósito. Elige Adventure in the Inca Empire.</p>`
     },
     en: {
-      title: "Contact Us",
+      title: "Why Choose Us?",
       content: `
-        <p><strong>Email:</strong> info@incaempire.tours</p>
-        <p><strong>Address:</strong> Cusco, Peru</p>
-        <p><strong>Phone:</strong> +51 987 654 321</p>
-        <p>If you have any questions, comments, or want to book an adventure, we’re ready to help!</p>`
+        <p>At <strong>Adventure in the Inca Empire</strong>, we don’t just organize tours; we craft experiences that transform. Visiting Peru and trekking through the Inca trails is not just a trip — it’s a lifelong dream, a connection with ancient history, rich culture, and the living nature of the Andes.</p>
+        <p>Every step is guided by local experts who love their land and are dedicated to your safety, authenticity, and unforgettable memories. We keep our groups small because human connection and personalized service truly matter.</p>
+        <p>From first contact to your return home, we’re with you. We offer 24/7 support, alternative routes, Andean cuisine, professional gear, and above all, a family of passionate travelers.</p>
+        <p>Trust your journey to those who live it. Choose purpose-driven travel. Choose Adventure in the Inca Empire.</p>`
     },
     fr: {
-      title: "Contactez-nous",
+      title: "Pourquoi nous choisir ?",
       content: `
-        <p><strong>Email :</strong> info@incaempire.tours</p>
-        <p><strong>Adresse :</strong> Cuzco, Pérou</p>
-        <p><strong>Téléphone :</strong> +51 987 654 321</p>
-        <p>Si vous avez des questions, des commentaires ou souhaitez réserver une aventure, nous sommes là pour vous !</p>`
+        <p>Chez <strong>Adventure in the Inca Empire</strong>, nous ne faisons pas que planifier des voyages ; nous créons des expériences qui transforment. Visiter le Pérou et parcourir les sentiers incas est un rêve, un lien avec l’histoire, la culture et la nature vivante des Andes.</p>
+        <p>Chaque pas est guidé par des experts locaux passionnés par leur terre, engagés à vous offrir sécurité, authenticité et souvenirs inoubliables. Nos groupes sont petits car l’attention humaine fait la différence.</p>
+        <p>Du premier contact jusqu’à votre retour, nous sommes à vos côtés. Support 24/7, itinéraires alternatifs, cuisine andine, équipement pro et surtout, une famille qui aime voyager.</p>
+        <p>Confiez votre aventure à ceux qui la vivent. Voyagez avec intention. Choisissez Adventure in the Inca Empire.</p>`
     },
     zh: {
-      title: "联系我们",
+      title: "为什么选择我们？",
       content: `
-        <p><strong>电子邮件：</strong> info@incaempire.tours</p>
-        <p><strong>地址：</strong> 秘鲁，库斯科</p>
-        <p><strong>电话：</strong> +51 987 654 321</p>
-        <p>如果您有任何疑问、建议或想预订行程，我们随时为您服务！</p>`
+        <p>在 <strong>Adventure in the Inca Empire</strong>，我们不仅仅是组织旅行，而是打造改变人生的体验。前往秘鲁、徒步印加古道，是一次与古老历史、丰富文化和安第斯自然奇观的深度连接。</p>
+        <p>我们的每一步旅程都由热爱家乡的本地导游引领，提供安全、真实和难忘的回忆。我们坚持小团体，因为我们相信人与人之间的连接才是旅行的灵魂。</p>
+        <p>从你联系我们那一刻，到你平安归来，我们都陪伴在你左右。全天候支持、多样路线、安第斯美食、专业装备，还有一颗热爱旅行的心。</p>
+        <p>信任这片土地的守护者。选择有意义的旅行。选择 Adventure in the Inca Empire。</p>`
     }
   };
 
@@ -121,7 +150,6 @@
     document.getElementById("contact-content").innerHTML = translations[lang].content;
   }
 
-  // Carga idioma por defecto
   setLang('es');
 </script>
 

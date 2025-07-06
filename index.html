@@ -4,31 +4,32 @@
   <meta charset="UTF-8" />
   <title>Inicio - Adventure in the Inca Empire</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="menu.css">
-  <style>.imagen-vertical {
-  text-align: center;
-  padding: 40px 20px;
-  background: white;
-  border-radius: 10px;
-  margin: 40px auto;
-  max-width: 600px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-  </style>
+  <link rel="stylesheet" href="menu.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('fondo.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
 
-.vertical-img {
-  width: 100%;
-  max-height: 800px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-   body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url('fondo.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-    
+    .vertical-img {
+      width: 100%;
+      max-height: 800px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .imagen-vertical {
+      text-align: center;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 600px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
     header {
       background: url('machupicchu.jpg') no-repeat center center;
       background-size: cover;
@@ -37,18 +38,22 @@
       padding: 100px 20px;
       text-shadow: 2px 2px 5px #000;
     }
+
     header h1 {
       font-size: 48px;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 24px;
     }
+
     section {
       padding: 40px 20px;
       max-width: 1100px;
       margin: auto;
     }
+
     .benefits, .gallery, .testimonials {
       background: white;
       margin-bottom: 20px;
@@ -56,35 +61,43 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 20px;
     }
+
     .benefits ul {
       list-style: none;
       padding: 0;
     }
+
     .benefits li::before {
       content: "✔️ ";
     }
+
     .gallery img {
       width: 32%;
       margin: 1%;
       border-radius: 10px;
     }
+
     .testimonials blockquote {
       font-style: italic;
       margin: 20px 0;
     }
+
     .map {
       text-align: center;
     }
+
     .map iframe {
       width: 100%;
       height: 300px;
       border: 0;
       border-radius: 10px;
     }
+
     .contact-btn {
       text-align: center;
       margin-top: 20px;
     }
+
     .contact-btn a {
       background: #25d366;
       color: white;
@@ -94,6 +107,7 @@
       font-size: 18px;
       font-weight: bold;
     }
+
     footer {
       background: #004d40;
       color: white;
@@ -106,9 +120,8 @@
 <body>
 
   <nav class="menu">
-    <ul><nav class="menu">
-  <img src="logo.png" alt="Logo" style="height: 50px; margin-right: 15px;">
-  <ul>
+    <img src="logo.png" alt="Logo" style="height: 50px; margin-right: 15px;">
+    <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="tours.html">Tours</a></li>
       <li><a href="about.html">Nosotros</a></li>
@@ -119,9 +132,9 @@
   </nav>
 
   <header>
-  <h1>Conociendo el Imperio Inca</h1>
-  <p>Explora Perú con guías locales certificados</p>
-</header>
+    <h1>Conociendo el Imperio Inca</h1>
+    <p>Explora Perú con guías locales certificados</p>
+  </header>
 
   <section class="benefits">
     <h2>¿Por qué elegirnos?</h2>
@@ -139,9 +152,10 @@
     <img src="salkantay.jpg" alt="Salkantay">
     <img src="lares.jpg" alt="Lares Trek">
   </section>
-      <section class="imagen-vertical">
-  <img src="vertical.jpg" alt="Foto destacada" class="vertical-img">
-</section>
+
+  <section class="imagen-vertical">
+    <img src="vertical.jpg" alt="Foto destacada" class="vertical-img">
+  </section>
 
   <section class="testimonials">
     <h2>Testimonios</h2>

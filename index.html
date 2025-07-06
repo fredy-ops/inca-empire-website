@@ -116,41 +116,55 @@
       margin-top: 40px;
     }
   </style>
+  <script>
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll('[data-es], [data-en], [data-fr], [data-cn]');
+      elements.forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
 </head>
 <body>
 
   <nav class="menu">
     <img src="logo.png" alt="Logo" style="height: 50px; margin-right: 15px;">
     <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="tours.html">Tours</a></li>
-      <li><a href="about.html">Nosotros</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contacto</a></li>
-      <li class="lang"><a href="#">EN</a> | <a href="#">FR</a> | <a href="#">中</a></li>
+      <li><a href="index.html" data-es="Inicio" data-en="Home" data-fr="Accueil" data-cn="主页">Inicio</a></li>
+      <li><a href="tours.html" data-es="Tours" data-en="Tours" data-fr="Excursions" data-cn="旅游">Tours</a></li>
+      <li><a href="about.html" data-es="Nosotros" data-en="About Us" data-fr="À propos" data-cn="关于我们">Nosotros</a></li>
+      <li><a href="faq.html" data-es="FAQ" data-en="FAQ" data-fr="FAQ" data-cn="常见问题">FAQ</a></li>
+      <li><a href="contact.html" data-es="Contacto" data-en="Contact" data-fr="Contact" data-cn="联系我们">Contacto</a></li>
+      <li class="lang">
+        <a href="#" onclick="changeLanguage('es')">ES</a> |
+        <a href="#" onclick="changeLanguage('en')">EN</a> |
+        <a href="#" onclick="changeLanguage('fr')">FR</a> |
+        <a href="#" onclick="changeLanguage('cn')">中</a>
+      </li>
     </ul>
   </nav>
 
   <header>
-    <h1>Conociendo el Imperio Inca</h1>
-    <p>Explora Perú con guías locales certificados</p>
+    <h1 data-es="Conociendo el Imperio Inca" data-en="Discovering the Inca Empire" data-fr="Découvrir l'Empire Inca" data-cn="探索印加帝国">Conociendo el Imperio Inca</h1>
+    <p data-es="Explora Perú con guías locales certificados" data-en="Explore Peru with certified local guides" data-fr="Explorez le Pérou avec des guides locaux certifiés" data-cn="与认证的当地导游一起探索秘鲁">Explora Perú con guías locales certificados</p>
   </header>
 
   <section class="benefits">
-    <h2>¿Por qué elegirnos?</h2>
+    <h2 data-es="¿Por qué elegirnos?" data-en="Why choose us?" data-fr="Pourquoi nous choisir ?" data-cn="为什么选择我们？">¿Por qué elegirnos?</h2>
     <ul>
-      <li>Guías locales con experiencia</li>
-      <li>Grupos pequeños y atención personalizada</li>
-      <li>Alimentación, transporte y equipo incluidos</li>
-      <li>Soporte 24/7 durante tu viaje</li>
+      <li data-es="Guías locales con experiencia" data-en="Experienced local guides" data-fr="Guides locaux expérimentés" data-cn="经验丰富的当地导游">Guías locales con experiencia</li>
+      <li data-es="Grupos pequeños y atención personalizada" data-en="Small groups and personalized attention" data-fr="Petits groupes et attention personnalisée" data-cn="小团体和个性化服务">Grupos pequeños y atención personalizada</li>
+      <li data-es="Alimentación, transporte y equipo incluidos" data-en="Meals, transportation, and equipment included" data-fr="Repas, transport et équipement inclus" data-cn="包含膳食、交通和设备">Alimentación, transporte y equipo incluidos</li>
+      <li data-es="Soporte 24/7 durante tu viaje" data-en="24/7 support during your trip" data-fr="Assistance 24/7 pendant votre voyage" data-cn="旅行期间全天候支持">Soporte 24/7 durante tu viaje</li>
     </ul>
   </section>
 
   <section class="gallery">
-    <h2>Galería de Aventuras</h2>
+    <h2 data-es="Galería de Aventuras" data-en="Adventure Gallery" data-fr="Galerie d'aventures" data-cn="冒险画廊">Galería de Aventuras</h2>
     <img src="machu1.jpg" alt="Machu Picchu">
     <img src="salkantay.jpg" alt="Salkantay">
     <img src="lares.jpg" alt="Lares Trek">
+    <img src="machupicchu.jpg" alt="Vista panorámica de Machu Picchu">
   </section>
 
   <section class="imagen-vertical">
@@ -158,18 +172,18 @@
   </section>
 
   <section class="testimonials">
-    <h2>Testimonios</h2>
-    <blockquote>"Una experiencia inolvidable con paisajes increíbles y excelente organización" — Anna, Alemania</blockquote>
-    <blockquote>"Recomiendo 100% esta agencia, ¡el guía fue espectacular!" — Luis, México</blockquote>
+    <h2 data-es="Testimonios" data-en="Testimonials" data-fr="Témoignages" data-cn="客户评价">Testimonios</h2>
+    <blockquote data-es="Una experiencia inolvidable con paisajes increíbles y excelente organización" data-en="An unforgettable experience with amazing landscapes and excellent organization" data-fr="Une expérience inoubliable avec des paysages incroyables et une excellente organisation" data-cn="一次难忘的经历，风景如画，组织有序">"Una experiencia inolvidable con paisajes increíbles y excelente organización" — Anna, Alemania</blockquote>
+    <blockquote data-es="Recomiendo 100% esta agencia, ¡el guía fue espectacular!" data-en="I 100% recommend this agency, the guide was amazing!" data-fr="Je recommande cette agence à 100%, le guide était spectaculaire !" data-cn="我强烈推荐这家机构，导游非常棒！">"Recomiendo 100% esta agencia, ¡el guía fue espectacular!" — Luis, México</blockquote>
   </section>
 
   <section class="map">
-    <h2>Encuéntranos en Cusco</h2>
+    <h2 data-es="Encuéntranos en Cusco" data-en="Find us in Cusco" data-fr="Trouvez-nous à Cusco" data-cn="在库斯科找到我们">Encuéntranos en Cusco</h2>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.0380825323611!2d-71.97722106690046!3d-13.517088731898875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916dd112d455ed3f%3A0x3cb4b9618681a7f5!2sPlaza%20de%20Armas%2C%20Cusco%2008002%2C%20Per%C3%BA!5e0!3m2!1ses-419!2spe!4v1652918592321!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy"></iframe>
   </section>
 
   <div class="contact-btn">
-    <a href="https://wa.me/51987654321" target="_blank">¡Contáctanos por WhatsApp!</a>
+    <a href="https://wa.me/51987654321" target="_blank" data-es="¡Contáctanos por WhatsApp!" data-en="Contact us on WhatsApp!" data-fr="Contactez-nous sur WhatsApp !" data-cn="通过 WhatsApp 联系我们！">¡Contáctanos por WhatsApp!</a>
   </div>
 
   <footer>

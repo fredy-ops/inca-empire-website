@@ -4,9 +4,47 @@
   <meta charset="UTF-8">
   <title>Preguntas Frecuentes - Adventure in the Inca Empire</title>
   <link rel="stylesheet" href="menu.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 10px 20px;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+      background: #eee;
+      align-items: center;
+    }
+
+    nav li {
+      display: inline;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #004d40;
+      font-weight: bold;
+    }
+
+    .lang {
+      margin-left: auto;
+    }
+  </style>
 </head>
 <body>
-  
+
 <nav class="menu">
   <ul>
     <li><a href="index.html">Inicio</a></li>
@@ -14,13 +52,46 @@
     <li><a href="about.html">Nosotros</a></li>
     <li><a href="faq.html">FAQ</a></li>
     <li><a href="contact.html">Contacto</a></li>
-    <li class="lang"><a href="#">EN</a> | <a href="#">FR</a> | <a href="#">中</a></li>
+    <li class="lang">
+      <a href="#" onclick="setLang('es')">ES</a> |
+      <a href="#" onclick="setLang('en')">EN</a> |
+      <a href="#" onclick="setLang('fr')">FR</a> |
+      <a href="#" onclick="setLang('zh')">中</a>
+    </li>
   </ul>
 </nav>
 
-  <header>
-    <h1>Preguntas Frecuentes</h1>
-    <p>Aquí respondemos las dudas más comunes sobre nuestros tours.</p>
-  </header>
+<header>
+  <h1 id="title">Preguntas Frecuentes</h1>
+  <p id="desc">Aquí respondemos las dudas más comunes sobre nuestros tours.</p>
+</header>
+
+<script>
+  const translations = {
+    es: {
+      title: "Preguntas Frecuentes",
+      desc: "Aquí respondemos las dudas más comunes sobre nuestros tours."
+    },
+    en: {
+      title: "Frequently Asked Questions",
+      desc: "Here we answer the most common questions about our tours."
+    },
+    fr: {
+      title: "Questions Fréquemment Posées",
+      desc: "Nous répondons ici aux questions les plus courantes sur nos circuits."
+    },
+    zh: {
+      title: "常见问题",
+      desc: "我们在这里回答有关旅游的常见问题。"
+    }
+  };
+
+  function setLang(lang) {
+    const t = translations[lang];
+    document.getElementById("title").textContent = t.title;
+    document.getElementById("desc").textContent = t.desc;
+  }
+</script>
+
 </body>
 </html>

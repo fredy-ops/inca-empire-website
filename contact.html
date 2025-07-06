@@ -3,25 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <title>Contacto - Adventure in the Inca Empire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="menu.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 10px 20px;
+      margin: 0;
+      display: flex;
+      gap: 15px;
+      background: #eee;
+      align-items: center;
+    }
+
+    nav li {
+      display: inline;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #004d40;
+      font-weight: bold;
+    }
+
+    .lang {
+      margin-left: auto;
+    }
+  </style>
 </head>
 <body>
-  
-<nav class="menu">
-  <ul>
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="tours.html">Tours</a></li>
-    <li><a href="about.html">Nosotros</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="contact.html">Contacto</a></li>
-    <li class="lang"><a href="#">EN</a> | <a href="#">FR</a> | <a href="#">中</a></li>
-  </ul>
-</nav>
+
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="tours.html">Tours</a></li>
+      <li><a href="about.html">Nosotros</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+      <li class="lang">
+        <a href="#" onclick="setLang('es')">ES</a> |
+        <a href="#" onclick="setLang('en')">EN</a> |
+        <a href="#" onclick="setLang('fr')">FR</a> |
+        <a href="#" onclick="setLang('zh')">中</a>
+      </li>
+    </ul>
+  </nav>
 
   <header>
-    <h1>Contáctanos</h1>
-    <p>Email: info@incaempire.tours</p>
-    <p>Dirección: Cusco, Perú</p>
+    <h1 id="title">Contáctanos</h1>
+    <p id="email">Email: info@incaempire.tours</p>
+    <p id="address">Dirección: Cusco, Perú</p>
   </header>
+
+  <script>
+    const translations = {
+      es: {
+        title: "Contáctanos",
+        email: "Email: info@incaempire.tours",
+        address: "Dirección: Cusco, Perú"
+      },
+      en: {
+        title: "Contact Us",
+        email: "Email: info@incaempire.tours",
+        address: "Address: Cusco, Peru"
+      },
+      fr: {
+        title: "Contactez-nous",
+        email: "E-mail : info@incaempire.tours",
+        address: "Adresse : Cusco, Pérou"
+      },
+      zh: {
+        title: "联系我们",
+        email: "邮箱: info@incaempire.tours",
+        address: "地址: 秘鲁库斯科"
+      }
+    };
+
+    function setLang(lang) {
+      const t = translations[lang];
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("email").textContent = t.email;
+      document.getElementById("address").textContent = t.address;
+    }
+  </script>
+
 </body>
 </html>

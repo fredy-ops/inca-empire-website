@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Tours - Adventure in the Inca Empire</title>
+  <link rel="stylesheet" href="menu.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -10,17 +12,20 @@
       margin: 0;
       padding: 0;
     }
+
     header {
       background: #00695c;
       color: white;
       padding: 30px;
       text-align: center;
     }
+
     .container {
       max-width: 1000px;
       margin: 30px auto;
       padding: 0 20px;
     }
+
     .tour {
       background: white;
       margin-bottom: 20px;
@@ -28,13 +33,16 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       padding: 20px;
     }
+
     .tour h2 {
       color: #00695c;
     }
+
     .tour p {
       font-size: 15px;
       line-height: 1.6;
     }
+
     .tour a {
       display: inline-block;
       margin-top: 10px;
@@ -45,6 +53,7 @@
       border-radius: 20px;
       font-weight: bold;
     }
+
     footer {
       background: #263238;
       color: white;
@@ -52,74 +61,217 @@
       padding: 15px;
       margin-top: 40px;
     }
+
+    .menu {
+      background-color: #004d40;
+      padding: 10px 0;
+    }
+
+    .menu ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+
+    .menu ul li {
+      margin: 0 15px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .menu ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .menu .lang {
+      margin-left: auto;
+      margin-right: 20px;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Nuestros Tours</h1>
-    <p>Explora las rutas más impresionantes del Imperio Inca</p>
-  </header>
-  <div class="container">
-    <div class="tour">
-      <h2>Salkantay Trek</h2>
-      <p>Una desafiante caminata de 5 días a través de paisajes nevados y selva alta, finalizando en Machu Picchu.</p>
-      <a href="#">Ver más detalles</a>
-    </div>
-    <div class="tour">
-      <h2>Lares Trek</h2>
-      <p>Ruta alternativa al Camino Inca, perfecta para el contacto cultural con comunidades andinas.</p>
-      <a href="#">Ver más detalles</a>
-    </div>
-    <div class="tour">
-      <h2>Camino Inca Clásico</h2>
-      <p>La ruta más famosa de Sudamérica. 4 días de historia, naturaleza y arqueología hacia Machu Picchu.</p>
-      <a href="#">Ver más detalles</a>
-    </div>
-    <div class="tour">
-      <h2>Choquequirao Trek</h2>
-      <p>Una travesía hacia la ciudad hermana de Machu Picchu, aún poco visitada, ideal para aventureros.</p>
-      <a href="#">Ver más detalles</a>
-    </div>
-    <div class="tour">
-      <h2>Valle Sagrado de los Incas</h2>
-      <p>Visita Pisac, Ollantaytambo, Chinchero y Maras-Moray en un solo día lleno de cultura y paisajes únicos.</p>
-      <a href="#">Ver más detalles</a>
-    </div>
-    <div class="tour">
-      <h2>Montaña de 7 Colores</h2>
-      <p>Una caminata de un día hacia la famosa Vinicunca, una maravilla natural de colores únicos en el mundo.</p>
-      <a href="#">Ver más detalles</a>
-    </div>
-  </div>
-  <footer>
-    <p>&copy; 2025 Adventure in the Inca Empire</p>
-  </footer>
-</body>.menu {
-  background-color: #004d40;
-  padding: 10px 0;
+
+<nav class="menu">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="tours.html">Tours</a></li>
+    <li><a href="about.html">Nosotros</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contact.html">Contacto</a></li>
+    <li class="lang">
+      <a href="#" onclick="setLang('es')">ES</a> |
+      <a href="#" onclick="setLang('en')">EN</a> |
+      <a href="#" onclick="setLang('fr')">FR</a> |
+      <a href="#" onclick="setLang('zh')">中</a>
+    </li>
+  </ul>
+</nav>
+
+<header>
+  <h1 id="header-title">Nuestros Tours</h1>
+  <p id="header-sub">Explora las rutas más impresionantes del Imperio Inca</p>
+</header>
+
+<div class="container" id="tours-container">
+  <!-- Se llenará desde JavaScript -->
+</div>
+
+<footer>
+  <p>&copy; 2025 Adventure in the Inca Empire</p>
+</footer>
+
+<script>
+const translations = {
+  es: {
+    headerTitle: "Nuestros Tours",
+    headerSub: "Explora las rutas más impresionantes del Imperio Inca",
+    tours: [
+      {
+        title: "Salkantay Trek",
+        desc: "Una desafiante caminata de 5 días a través de paisajes nevados y selva alta, finalizando en Machu Picchu."
+      },
+      {
+        title: "Lares Trek",
+        desc: "Ruta alternativa al Camino Inca, perfecta para el contacto cultural con comunidades andinas."
+      },
+      {
+        title: "Camino Inca Clásico",
+        desc: "La ruta más famosa de Sudamérica. 4 días de historia, naturaleza y arqueología hacia Machu Picchu."
+      },
+      {
+        title: "Choquequirao Trek",
+        desc: "Una travesía hacia la ciudad hermana de Machu Picchu, aún poco visitada, ideal para aventureros."
+      },
+      {
+        title: "Valle Sagrado de los Incas",
+        desc: "Visita Pisac, Ollantaytambo, Chinchero y Maras-Moray en un solo día lleno de cultura y paisajes únicos."
+      },
+      {
+        title: "Montaña de 7 Colores",
+        desc: "Una caminata de un día hacia la famosa Vinicunca, una maravilla natural de colores únicos en el mundo."
+      }
+    ]
+  },
+  en: {
+    headerTitle: "Our Tours",
+    headerSub: "Explore the most impressive Inca Empire routes",
+    tours: [
+      {
+        title: "Salkantay Trek",
+        desc: "A challenging 5-day hike through snowy peaks and high jungle, ending at Machu Picchu."
+      },
+      {
+        title: "Lares Trek",
+        desc: "An alternative route to the Inca Trail, great for cultural immersion with Andean communities."
+      },
+      {
+        title: "Classic Inca Trail",
+        desc: "The most famous route in South America. 4 days of history, nature, and archaeology to Machu Picchu."
+      },
+      {
+        title: "Choquequirao Trek",
+        desc: "A journey to Machu Picchu’s sister city, still off the beaten path, perfect for adventurers."
+      },
+      {
+        title: "Sacred Valley of the Incas",
+        desc: "Visit Pisac, Ollantaytambo, Chinchero, and Maras-Moray in one day filled with culture and views."
+      },
+      {
+        title: "Rainbow Mountain",
+        desc: "A one-day hike to Vinicunca, a natural wonder with unique rainbow colors."
+      }
+    ]
+  },
+  fr: {
+    headerTitle: "Nos Circuits",
+    headerSub: "Explorez les itinéraires les plus impressionnants de l'Empire Inca",
+    tours: [
+      {
+        title: "Trek de Salkantay",
+        desc: "Une randonnée difficile de 5 jours à travers des sommets enneigés et la jungle jusqu'à Machu Picchu."
+      },
+      {
+        title: "Trek de Lares",
+        desc: "Une route alternative au Chemin Inca, idéale pour rencontrer les communautés andines."
+      },
+      {
+        title: "Chemin Inca Classique",
+        desc: "L'itinéraire le plus célèbre d'Amérique du Sud. 4 jours de marche vers Machu Picchu."
+      },
+      {
+        title: "Trek de Choquequirao",
+        desc: "Un voyage vers la ville sœur de Machu Picchu, encore peu visitée, pour les vrais aventuriers."
+      },
+      {
+        title: "Vallée Sacrée des Incas",
+        desc: "Visitez Pisac, Ollantaytambo, Chinchero et Maras-Moray dans une journée riche en culture."
+      },
+      {
+        title: "Montagne aux 7 Couleurs",
+        desc: "Une randonnée d'une journée vers Vinicunca, une merveille naturelle colorée unique."
+      }
+    ]
+  },
+  zh: {
+    headerTitle: "我们的行程",
+    headerSub: "探索印加帝国最令人惊叹的路线",
+    tours: [
+      {
+        title: "萨尔坎泰徒步",
+        desc: "为期5天的艰苦徒步，穿越雪山和高地丛林，最终抵达马丘比丘。"
+      },
+      {
+        title: "拉雷斯徒步",
+        desc: "印加古道的替代路线，非常适合与安第斯社区进行文化接触。"
+      },
+      {
+        title: "经典印加古道",
+        desc: "南美最著名的路线。4天徒步穿越历史、自然与考古，前往马丘比丘。"
+      },
+      {
+        title: "乔克基劳徒步",
+        desc: "通往马丘比丘姊妹城市的探险之旅，仍未被大量游客发现。"
+      },
+      {
+        title: "印加圣谷",
+        desc: "一天之内游览皮萨克、奥良泰坦博、钦切罗和马拉斯-莫雷。"
+      },
+      {
+        title: "七彩山",
+        desc: "一天徒步前往彩虹山维尼昆卡，色彩斑斓的自然奇观。"
+      }
+    ]
+  }
+};
+
+function setLang(lang) {
+  const t = translations[lang];
+  document.getElementById('header-title').textContent = t.headerTitle;
+  document.getElementById('header-sub').textContent = t.headerSub;
+
+  const container = document.getElementById('tours-container');
+  container.innerHTML = '';
+  t.tours.forEach(tour => {
+    container.innerHTML += `
+      <div class="tour">
+        <h2>${tour.title}</h2>
+        <p>${tour.desc}</p>
+        <a href="#">Ver más detalles</a>
+      </div>`;
+  });
 }
-.menu ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-}
-.menu ul li {
-  margin: 0 15px;
-}
-.menu ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-.menu ul li a:hover {
-  text-decoration: underline;
-}
-.menu .lang {
-  margin-left: auto;
-  margin-right: 20px;
-}
-</html><link rel="stylesheet" href="menu.css">
+
+// idioma inicial español
+setLang('es');
+</script>
+
+</body>
+</html>

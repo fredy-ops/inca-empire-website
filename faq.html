@@ -9,6 +9,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
+      background: #f0f0f0;
     }
 
     header {
@@ -41,6 +42,47 @@
     .lang {
       margin-left: auto;
     }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .faq-item {
+      background: white;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      background: #00695c;
+      color: white;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: 18px;
+    }
+
+    .faq-answer {
+      padding: 15px 20px;
+      display: none;
+      background: #fafafa;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
@@ -66,31 +108,136 @@
   <p id="desc">Aquí respondemos las dudas más comunes sobre nuestros tours.</p>
 </header>
 
-<script>
-  const translations = {
-    es: {
-      title: "Preguntas Frecuentes",
-      desc: "Aquí respondemos las dudas más comunes sobre nuestros tours."
-    },
-    en: {
-      title: "Frequently Asked Questions",
-      desc: "Here we answer the most common questions about our tours."
-    },
-    fr: {
-      title: "Questions Fréquemment Posées",
-      desc: "Nous répondons ici aux questions les plus courantes sur nos circuits."
-    },
-    zh: {
-      title: "常见问题",
-      desc: "我们在这里回答有关旅游的常见问题。"
-    }
-  };
+<div class="container" id="faq-list">
+  <!-- Se insertan las preguntas desde JavaScript -->
+</div>
 
-  function setLang(lang) {
-    const t = translations[lang];
-    document.getElementById("title").textContent = t.title;
-    document.getElementById("desc").textContent = t.desc;
+<footer>
+  <p>&copy; 2025 Adventure in the Inca Empire</p>
+</footer>
+
+<script>
+const faqs = {
+  es: {
+    title: "Preguntas Frecuentes",
+    desc: "Aquí respondemos las dudas más comunes sobre nuestros tours.",
+    questions: [
+      {
+        q: "¿Qué necesito llevar para un trek?",
+        a: "Ropa abrigadora, zapatillas de trekking, protector solar, cámara y buen ánimo. Nosotros proveemos carpas, comida y equipo."
+      },
+      {
+        q: "¿Necesito experiencia previa en caminatas?",
+        a: "No es obligatorio, pero se recomienda buena condición física. Nuestros guías se adaptan al ritmo del grupo."
+      },
+      {
+        q: "¿Cómo reservo un tour?",
+        a: "Puedes escribirnos por WhatsApp o correo, o reservar directamente desde nuestro sitio web."
+      },
+      {
+        q: "¿Está incluido el boleto a Machu Picchu?",
+        a: "Sí. Todos nuestros paquetes lo incluyen, junto con transporte, alojamiento y guía oficial."
+      }
+    ]
+  },
+  en: {
+    title: "Frequently Asked Questions",
+    desc: "Here we answer the most common questions about our tours.",
+    questions: [
+      {
+        q: "What should I bring for a trek?",
+        a: "Warm clothes, trekking shoes, sunscreen, a camera and good energy. We provide tents, meals, and gear."
+      },
+      {
+        q: "Do I need hiking experience?",
+        a: "It’s not required, but good fitness helps. Our guides adjust to the group's pace."
+      },
+      {
+        q: "How can I book a tour?",
+        a: "You can contact us via WhatsApp, email, or book directly on our website."
+      },
+      {
+        q: "Is the Machu Picchu ticket included?",
+        a: "Yes. All our packages include the ticket, transport, lodging, and a certified guide."
+      }
+    ]
+  },
+  fr: {
+    title: "Questions Fréquemment Posées",
+    desc: "Nous répondons ici aux questions les plus courantes sur nos circuits.",
+    questions: [
+      {
+        q: "Que dois-je emporter pour un trek ?",
+        a: "Vêtements chauds, chaussures de randonnée, crème solaire, appareil photo et bonne énergie. Nous fournissons les tentes, repas et équipements."
+      },
+      {
+        q: "Faut-il avoir de l'expérience en randonnée ?",
+        a: "Ce n'est pas obligatoire, mais une bonne condition physique est utile. Nos guides s’adaptent au rythme du groupe."
+      },
+      {
+        q: "Comment réserver une excursion ?",
+        a: "Contactez-nous par WhatsApp, e-mail ou réservez directement sur notre site."
+      },
+      {
+        q: "Le billet pour Machu Picchu est-il inclus ?",
+        a: "Oui. Tous nos forfaits l’incluent, avec transport, hébergement et guide certifié."
+      }
+    ]
+  },
+  zh: {
+    title: "常见问题",
+    desc: "我们在这里回答有关旅游的常见问题。",
+    questions: [
+      {
+        q: "徒步旅行需要携带什么？",
+        a: "保暖衣物、登山鞋、防晒霜、相机和好心情。我们提供帐篷、餐食和装备。"
+      },
+      {
+        q: "我需要有徒步经验吗？",
+        a: "不强求，但身体状况良好会更好。导游会根据团队节奏调整。"
+      },
+      {
+        q: "如何预订行程？",
+        a: "可以通过 WhatsApp、电子邮件或网站直接预订。"
+      },
+      {
+        q: "包含马丘比丘门票吗？",
+        a: "包含。所有行程均包括门票、交通、住宿和导游服务。"
+      }
+    ]
   }
+};
+
+function setLang(lang) {
+  const data = faqs[lang];
+  document.getElementById('title').textContent = data.title;
+  document.getElementById('desc').textContent = data.desc;
+
+  const container = document.getElementById('faq-list');
+  container.innerHTML = '';
+
+  data.questions.forEach((item, index) => {
+    const faqItem = document.createElement('div');
+    faqItem.className = 'faq-item';
+
+    faqItem.innerHTML = `
+      <button class="faq-question" onclick="toggleAnswer(this)">
+        ${item.q}
+      </button>
+      <div class="faq-answer">${item.a}</div>
+    `;
+    container.appendChild(faqItem);
+  });
+}
+
+function toggleAnswer(btn) {
+  const answer = btn.nextElementSibling;
+  const display = answer.style.display;
+  answer.style.display = display === 'block' ? 'none' : 'block';
+}
+
+// Idioma por defecto
+setLang('es');
 </script>
 
 </body>

@@ -8,13 +8,13 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: linear-gradient(to bottom, #e8f5e9, #fff);
       margin: 0;
       padding: 0;
     }
 
     header {
-      background: #00695c;
+      background: #004d40;
       color: white;
       padding: 30px;
       text-align: center;
@@ -27,7 +27,7 @@
     }
 
     .tour {
-      background: white;
+      background: #ffffff;
       margin-bottom: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -39,8 +39,9 @@
     }
 
     .tour p {
-      font-size: 15px;
-      line-height: 1.6;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #333;
     }
 
     .tour a {
@@ -121,7 +122,6 @@
 </header>
 
 <div class="container" id="tours-container">
-  <!-- Se llenará desde JavaScript -->
 </div>
 
 <footer>
@@ -136,127 +136,37 @@ const translations = {
     tours: [
       {
         title: "Salkantay Trek",
-        desc: "Una desafiante caminata de 5 días a través de paisajes nevados y selva alta, finalizando en Machu Picchu."
+        desc: "Una desafiante caminata de 5 días que atraviesa glaciares majestuosos, valles verdes y bosques nublados antes de llegar a Machu Picchu. Perfecta para aventureros en busca de paisajes espectaculares."
       },
       {
         title: "Lares Trek",
-        desc: "Ruta alternativa al Camino Inca, perfecta para el contacto cultural con comunidades andinas."
+        desc: "Conectando pueblos andinos tradicionales, el Lares Trek ofrece una experiencia cultural profunda. Caminarás entre alpacas, aprenderás de los habitantes locales y disfrutarás de aguas termales naturales."
       },
       {
         title: "Camino Inca Clásico",
-        desc: "La ruta más famosa de Sudamérica. 4 días de historia, naturaleza y arqueología hacia Machu Picchu."
+        desc: "El legendario camino de 4 días a Machu Picchu. Sigue los pasos de los antiguos incas a través de escalinatas de piedra, bosques nublados y sitios arqueológicos únicos."
       },
       {
         title: "Choquequirao Trek",
-        desc: "Una travesía hacia la ciudad hermana de Machu Picchu, aún poco visitada, ideal para aventureros."
+        desc: "Aventúrate hacia Choquequirao, la ciudad hermana de Machu Picchu. Este remoto sitio arqueológico requiere un esfuerzo físico significativo, pero recompensa con vistas solitarias y un viaje fuera de lo común."
       },
       {
         title: "Valle Sagrado de los Incas",
-        desc: "Visita Pisac, Ollantaytambo, Chinchero y Maras-Moray en un solo día lleno de cultura y paisajes únicos."
+        desc: "Descubre los tesoros culturales del Valle Sagrado en un recorrido de un día por Pisac, Ollantaytambo, Chinchero y las terrazas de Maras y Moray. Ideal para los amantes de la historia."
       },
       {
         title: "Montaña de 7 Colores",
-        desc: "Una caminata de un día hacia la famosa Vinicunca, una maravilla natural de colores únicos en el mundo."
+        desc: "Vinicunca, conocida como la Montaña de 7 Colores, ofrece un paisaje surrealista. Esta caminata de un día a gran altitud muestra la belleza natural multicolor de los Andes."
       }
     ]
   },
-  en: {
-    headerTitle: "Our Tours",
-    headerSub: "Explore the most impressive Inca Empire routes",
-    tours: [
-      {
-        title: "Salkantay Trek",
-        desc: "A challenging 5-day hike through snowy peaks and high jungle, ending at Machu Picchu."
-      },
-      {
-        title: "Lares Trek",
-        desc: "An alternative route to the Inca Trail, great for cultural immersion with Andean communities."
-      },
-      {
-        title: "Classic Inca Trail",
-        desc: "The most famous route in South America. 4 days of history, nature, and archaeology to Machu Picchu."
-      },
-      {
-        title: "Choquequirao Trek",
-        desc: "A journey to Machu Picchu’s sister city, still off the beaten path, perfect for adventurers."
-      },
-      {
-        title: "Sacred Valley of the Incas",
-        desc: "Visit Pisac, Ollantaytambo, Chinchero, and Maras-Moray in one day filled with culture and views."
-      },
-      {
-        title: "Rainbow Mountain",
-        desc: "A one-day hike to Vinicunca, a natural wonder with unique rainbow colors."
-      }
-    ]
-  },
-  fr: {
-    headerTitle: "Nos Circuits",
-    headerSub: "Explorez les itinéraires les plus impressionnants de l'Empire Inca",
-    tours: [
-      {
-        title: "Trek de Salkantay",
-        desc: "Une randonnée difficile de 5 jours à travers des sommets enneigés et la jungle jusqu'à Machu Picchu."
-      },
-      {
-        title: "Trek de Lares",
-        desc: "Une route alternative au Chemin Inca, idéale pour rencontrer les communautés andines."
-      },
-      {
-        title: "Chemin Inca Classique",
-        desc: "L'itinéraire le plus célèbre d'Amérique du Sud. 4 jours de marche vers Machu Picchu."
-      },
-      {
-        title: "Trek de Choquequirao",
-        desc: "Un voyage vers la ville sœur de Machu Picchu, encore peu visitée, pour les vrais aventuriers."
-      },
-      {
-        title: "Vallée Sacrée des Incas",
-        desc: "Visitez Pisac, Ollantaytambo, Chinchero et Maras-Moray dans une journée riche en culture."
-      },
-      {
-        title: "Montagne aux 7 Couleurs",
-        desc: "Une randonnée d'une journée vers Vinicunca, une merveille naturelle colorée unique."
-      }
-    ]
-  },
-  zh: {
-    headerTitle: "我们的行程",
-    headerSub: "探索印加帝国最令人惊叹的路线",
-    tours: [
-      {
-        title: "萨尔坎泰徒步",
-        desc: "为期5天的艰苦徒步，穿越雪山和高地丛林，最终抵达马丘比丘。"
-      },
-      {
-        title: "拉雷斯徒步",
-        desc: "印加古道的替代路线，非常适合与安第斯社区进行文化接触。"
-      },
-      {
-        title: "经典印加古道",
-        desc: "南美最著名的路线。4天徒步穿越历史、自然与考古，前往马丘比丘。"
-      },
-      {
-        title: "乔克基劳徒步",
-        desc: "通往马丘比丘姊妹城市的探险之旅，仍未被大量游客发现。"
-      },
-      {
-        title: "印加圣谷",
-        desc: "一天之内游览皮萨克、奥良泰坦博、钦切罗和马拉斯-莫雷。"
-      },
-      {
-        title: "七彩山",
-        desc: "一天徒步前往彩虹山维尼昆卡，色彩斑斓的自然奇观。"
-      }
-    ]
-  }
+  // EN, FR, ZH to be added next
 };
 
 function setLang(lang) {
   const t = translations[lang];
   document.getElementById('header-title').textContent = t.headerTitle;
   document.getElementById('header-sub').textContent = t.headerSub;
-
   const container = document.getElementById('tours-container');
   container.innerHTML = '';
   t.tours.forEach(tour => {
@@ -269,7 +179,6 @@ function setLang(lang) {
   });
 }
 
-// idioma inicial español
 setLang('es');
 </script>
 

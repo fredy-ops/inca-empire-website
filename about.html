@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Nosotros - Adventure in the Inca Empire</title>
+  <title>Contacto - Adventure in the Inca Empire</title>
   <link rel="stylesheet" href="menu.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
@@ -12,7 +12,7 @@
     }
 
     header {
-      background: #004d40;
+      background: #00695c;
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -41,10 +41,18 @@
     .lang {
       margin-left: auto;
     }
+
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      font-size: 18px;
+    }
   </style>
 </head>
 <body>
-  
+
 <nav class="menu">
   <ul>
     <li><a href="index.html">Inicio</a></li>
@@ -62,35 +70,59 @@
 </nav>
 
 <header>
-  <h1 id="title">Sobre Nosotros</h1>
-  <p id="desc">Somos una agencia de turismo especializada en caminatas por el Imperio Inca.</p>
+  <h1 id="contact-title">Contáctanos</h1>
 </header>
+
+<div class="content" id="contact-content">
+  <p><strong>Email:</strong> info@incaempire.tours</p>
+  <p><strong>Dirección:</strong> Cusco, Perú</p>
+  <p><strong>Teléfono:</strong> +51 987 654 321</p>
+  <p>Si tienes dudas, comentarios o deseas reservar una aventura, ¡estamos listos para ayudarte!</p>
+</div>
 
 <script>
   const translations = {
     es: {
-      title: "Sobre Nosotros",
-      desc: "Somos una agencia de turismo especializada en caminatas por el Imperio Inca."
+      title: "Contáctanos",
+      content: `
+        <p><strong>Email:</strong> info@incaempire.tours</p>
+        <p><strong>Dirección:</strong> Cusco, Perú</p>
+        <p><strong>Teléfono:</strong> +51 987 654 321</p>
+        <p>Si tienes dudas, comentarios o deseas reservar una aventura, ¡estamos listos para ayudarte!</p>`
     },
     en: {
-      title: "About Us",
-      desc: "We are a tourism agency specialized in treks through the Inca Empire."
+      title: "Contact Us",
+      content: `
+        <p><strong>Email:</strong> info@incaempire.tours</p>
+        <p><strong>Address:</strong> Cusco, Peru</p>
+        <p><strong>Phone:</strong> +51 987 654 321</p>
+        <p>If you have any questions, comments, or want to book an adventure, we’re ready to help!</p>`
     },
     fr: {
-      title: "À Propos de Nous",
-      desc: "Nous sommes une agence de tourisme spécialisée dans les randonnées à travers l'Empire Inca."
+      title: "Contactez-nous",
+      content: `
+        <p><strong>Email :</strong> info@incaempire.tours</p>
+        <p><strong>Adresse :</strong> Cuzco, Pérou</p>
+        <p><strong>Téléphone :</strong> +51 987 654 321</p>
+        <p>Si vous avez des questions, des commentaires ou souhaitez réserver une aventure, nous sommes là pour vous !</p>`
     },
     zh: {
-      title: "关于我们",
-      desc: "我们是一家专注于印加帝国徒步旅行的旅游机构。"
+      title: "联系我们",
+      content: `
+        <p><strong>电子邮件：</strong> info@incaempire.tours</p>
+        <p><strong>地址：</strong> 秘鲁，库斯科</p>
+        <p><strong>电话：</strong> +51 987 654 321</p>
+        <p>如果您有任何疑问、建议或想预订行程，我们随时为您服务！</p>`
     }
   };
 
   function setLang(lang) {
-    const t = translations[lang];
-    document.getElementById("title").textContent = t.title;
-    document.getElementById("desc").textContent = t.desc;
+    document.getElementById("contact-title").textContent = translations[lang].title;
+    document.getElementById("contact-content").innerHTML = translations[lang].content;
   }
+
+  // Carga idioma por defecto
+  setLang('es');
 </script>
 
 </body>
